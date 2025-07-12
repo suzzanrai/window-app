@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TextBox txtbookide;
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtbookide = new System.Windows.Forms.TextBox();
             this.txtsemester = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -49,28 +49,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.bbookname = new System.Windows.Forms.Label();
             this.bbookid = new System.Windows.Forms.Label();
-            txtbookide = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtbookide
-            // 
-            txtbookide.AccessibleName = "";
-            txtbookide.Location = new System.Drawing.Point(868, 114);
-            txtbookide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            txtbookide.Name = "txtbookide";
-            txtbookide.ShortcutsEnabled = false;
-            txtbookide.Size = new System.Drawing.Size(40, 22);
-            txtbookide.TabIndex = 4;
-            txtbookide.Tag = "";
-            txtbookide.TextChanged += new System.EventHandler(this.txtbookid_TextChanged);
-            // 
             // panel1
             // 
+            this.panel1.AllowDrop = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtbookide);
             this.panel1.Controls.Add(this.txtsemester);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -86,7 +77,6 @@
             this.panel1.Controls.Add(this.txtfaculty);
             this.panel1.Controls.Add(this.bfaculty);
             this.panel1.Controls.Add(this.txtbookname);
-            this.panel1.Controls.Add(txtbookide);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.bbookname);
             this.panel1.Controls.Add(this.bbookid);
@@ -96,12 +86,22 @@
             this.panel1.Size = new System.Drawing.Size(1216, 587);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(868, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
-            this.textBox1.TabIndex = 22;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(446, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(298, 36);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "ADD BOOK DETAIL";
+            // 
+            // txtbookide
+            // 
+            this.txtbookide.Location = new System.Drawing.Point(868, 114);
+            this.txtbookide.Name = "txtbookide";
+            this.txtbookide.Size = new System.Drawing.Size(69, 22);
+            this.txtbookide.TabIndex = 23;
             // 
             // txtsemester
             // 
@@ -174,6 +174,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "CLEAR";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -193,6 +194,7 @@
             this.txtpublication.Name = "txtpublication";
             this.txtpublication.Size = new System.Drawing.Size(195, 22);
             this.txtpublication.TabIndex = 12;
+            this.txtpublication.TextChanged += new System.EventHandler(this.txtpublication_TextChanged);
             // 
             // bpublication
             // 
@@ -211,6 +213,7 @@
             this.txtauthor.Name = "txtauthor";
             this.txtauthor.Size = new System.Drawing.Size(195, 22);
             this.txtauthor.TabIndex = 9;
+            this.txtauthor.TextChanged += new System.EventHandler(this.txtauthor_TextChanged);
             // 
             // bauthor
             // 
@@ -224,11 +227,15 @@
             // txtfaculty
             // 
             this.txtfaculty.FormattingEnabled = true;
+            this.txtfaculty.Items.AddRange(new object[] {
+            "BCA",
+            "BBA"});
             this.txtfaculty.Location = new System.Drawing.Point(868, 205);
             this.txtfaculty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtfaculty.Name = "txtfaculty";
             this.txtfaculty.Size = new System.Drawing.Size(195, 24);
             this.txtfaculty.TabIndex = 7;
+            this.txtfaculty.SelectedIndexChanged += new System.EventHandler(this.txtfaculty_SelectedIndexChanged);
             // 
             // bfaculty
             // 
@@ -246,6 +253,7 @@
             this.txtbookname.Name = "txtbookname";
             this.txtbookname.Size = new System.Drawing.Size(195, 22);
             this.txtbookname.TabIndex = 5;
+            this.txtbookname.TextChanged += new System.EventHandler(this.txtbookname_TextChanged);
             // 
             // label3
             // 
@@ -267,11 +275,28 @@
             // bbookid
             // 
             this.bbookid.AutoSize = true;
-            this.bbookid.Location = new System.Drawing.Point(756, 117);
+            this.bbookid.Location = new System.Drawing.Point(757, 120);
             this.bbookid.Name = "bbookid";
             this.bbookid.Size = new System.Drawing.Size(55, 16);
             this.bbookid.TabIndex = 1;
             this.bbookid.Text = "Book ID";
+            // 
+            // textBox1
+            // 
+            this.textBox1.FormattingEnabled = true;
+            this.textBox1.Items.AddRange(new object[] {
+            "I",
+            "II",
+            "III",
+            "IV",
+            "V",
+            "VI",
+            "VII",
+            "VII"});
+            this.textBox1.Location = new System.Drawing.Point(868, 246);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(195, 24);
+            this.textBox1.TabIndex = 27;
             // 
             // Form3
             // 
@@ -298,8 +323,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label bbookname;
         private System.Windows.Forms.Label bbookid;
-        private System.Windows.Forms.TextBox txtbookide;
-
         private System.Windows.Forms.Label bfaculty;
         private System.Windows.Forms.TextBox txtbookname;
         private System.Windows.Forms.Label bpublication;
@@ -314,7 +337,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label txtsemester;
+        private System.Windows.Forms.TextBox txtbookide;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox textBox1;
     }
 }

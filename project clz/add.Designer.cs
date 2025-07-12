@@ -1,4 +1,6 @@
-﻿namespace project_clz
+﻿using System;
+
+namespace project_clz
 {
     partial class add
     {
@@ -29,6 +31,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.NEW = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.combobox = new System.Windows.Forms.ComboBox();
@@ -56,6 +60,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.fileSystemWatcher2 = new System.IO.FileSystemWatcher();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -66,6 +71,8 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.NEW);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.combobox);
@@ -95,6 +102,28 @@
             this.panel1.Size = new System.Drawing.Size(1220, 610);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::project_clz.Properties.Resources.icons8_cross_30;
+            this.pictureBox2.Location = new System.Drawing.Point(1164, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(235, 551);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 39);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "CLEAR";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // NEW
             // 
             this.NEW.Location = new System.Drawing.Point(42, 62);
@@ -103,7 +132,7 @@
             this.NEW.TabIndex = 27;
             this.NEW.Text = "ADD";
             this.NEW.UseVisualStyleBackColor = true;
-            this.NEW.Click += new System.EventHandler(this.button4_Click);
+            this.NEW.Click += new System.EventHandler(this.NEW_Click);
             // 
             // label1
             // 
@@ -133,11 +162,11 @@
             this.txtmodify.TabIndex = 23;
             this.txtmodify.Text = "MODIFY";
             this.txtmodify.UseVisualStyleBackColor = true;
-            this.txtmodify.Click += new System.EventHandler(this.button3_Click);
+            this.txtmodify.Click += new System.EventHandler(this.txtmodify_Click_1);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(340, 556);
+            this.button2.Location = new System.Drawing.Point(339, 551);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 39);
             this.button2.TabIndex = 22;
@@ -194,7 +223,7 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(206, 518);
+            this.button1.Location = new System.Drawing.Point(160, 505);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 23);
@@ -208,7 +237,7 @@
             this.photo.BackColor = System.Drawing.Color.White;
             this.photo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.photo.Enabled = false;
-            this.photo.Location = new System.Drawing.Point(206, 419);
+            this.photo.Location = new System.Drawing.Point(160, 406);
             this.photo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.photo.Name = "photo";
             this.photo.Size = new System.Drawing.Size(116, 122);
@@ -237,7 +266,6 @@
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.Size = new System.Drawing.Size(233, 22);
             this.txtfirstname.TabIndex = 11;
-            this.txtfirstname.TextChanged += new System.EventHandler(this.txtfirstname_TextChanged);
             // 
             // txtcontactnumber
             // 
@@ -317,12 +345,12 @@
             // 
             this.lable1.AutoSize = true;
             this.lable1.BackColor = System.Drawing.Color.Transparent;
-            this.lable1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable1.Location = new System.Drawing.Point(203, 30);
+            this.lable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable1.Location = new System.Drawing.Point(471, 6);
             this.lable1.Name = "lable1";
-            this.lable1.Size = new System.Drawing.Size(141, 22);
+            this.lable1.Size = new System.Drawing.Size(282, 36);
             this.lable1.TabIndex = 0;
-            this.lable1.Text = "Student Detail";
+            this.lable1.Text = "Add Student Detail";
             // 
             // pictureBox1
             // 
@@ -335,13 +363,11 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            this.fileSystemWatcher1.Changed += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Changed);
             // 
             // openFileDialog1
             // 
@@ -359,17 +385,29 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1239, 654);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "add";
             this.Text = "B";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void txtcontactnumber_TextChanged(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -401,5 +439,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox combobox;
         private System.Windows.Forms.Button NEW;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

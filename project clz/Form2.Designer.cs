@@ -130,6 +130,7 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(249, 22);
             this.txtusername.TabIndex = 10;
+            this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // pictureBox1
             // 

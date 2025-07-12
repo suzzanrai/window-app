@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,41 +18,27 @@ using project_clz.Model;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using DbShell.Driver.Common.CommonDataLayer;
 using Google.Protobuf.WellKnownTypes;
+using Mysqlx.Crud;
+using System.Collections;
+using Dapper;
 
 namespace project_clz
 {
     public partial class add : Form
     {
-        private string connectionString;
         string gender;
         string action;
+        private string connectionString;
 
         public add()
         {
             InitializeComponent();
             connectionString = ConfigurationManager.ConnectionStrings["myconn"].ToString();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            // Handle pictureBox1 click event if needed
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             imagefile();
         }
-
-        private void fileSystemWatcher1_Changed(object sender, System.IO.FileSystemEventArgs e)
-        {
-            // Handle fileSystemWatcher changed event if needed
-        }
-
-        private void txtfirstname_TextChanged(object sender, EventArgs e)
-        {
-            // Handle txtfirstname text changed event if needed
-        }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             gender = "Male";
@@ -61,13 +48,13 @@ namespace project_clz
         {
             gender = "Female";
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             imagefile();
         }
-
-        // uploding photo in database
+     
+       
+        //Function for image file 
         void imagefile()
         {
             string imagelocation = "";
@@ -87,11 +74,13 @@ namespace project_clz
             }
         }
 
+        // Select the action:
         private void button2_Click(object sender, EventArgs e)
         {
             if (action == "add")
             {
                 save();
+                ClearBoxes();
             }
             else if (action == "editt")
             {
@@ -124,9 +113,9 @@ namespace project_clz
                 {
                     db.Open();
                     var insertQuery = @"
-                        INSERT INTO [STUDENTDETAIL] 
-                        (FirstName, LastName, DOB, ContactNumber, Batch, Gender, Photo) 
-                        VALUES (@fname, @lname, @dobb, @contact, @batch, @genderr, @photo)";
+                            INSERT INTO STUDENTDETAIL
+                            (FirstName, LastName, DOB, ContactNumber, Batch, Gender, Photo) 
+                            VALUES (@fname, @lname, @dobb, @contact, @batch, @genderr, @photo)";
 
                     var affectedRows = db.Execute(insertQuery, new
                     {
@@ -146,161 +135,12 @@ namespace project_clz
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}");
             }
-
-        }
-
-        private void txtcontactnumber_TextChanged(object sender, EventArgs e)
-        {
-            // Handle txtcontactnumber text changed event if needed
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            action = "editt";
-            fetchDataInTable();
-            combobox.Visible = true;
-            label1.Visible = true;
-
-            //  action ="modify";
-            BoxEnable();
-            fetchcomplaindata();
         }
 
 
 
+        // EDIT 
 
-
-        public void fetchcomplaindata()
-        {
-            try
-            {
-                using (IDbConnection db = new SqlConnection(connectionString))
-                {
-                    db.Open();
-                    var data = db.Query<User>("SELECT * FROM STUDENTDETAIL");
-
-                    // Check if data contains any items
-                    if (data != null && data.Any())
-                    {
-                        // Assuming complainid is a valid property of the complain class
-                        combobox.DataSource = data.ToList();
-                        combobox.ValueMember = "ID"; // Corrected
-                        combobox.DisplayMember = "ID"; // Corrected
-                        combobox.SelectedIndex = 0;
-                    }
-                    else
-                    {
-                        MessageBox.Show("No data found.");
-                    }
-
-                    db.Close();
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error fetching data: " + ex.Message);
-            }
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            action = "add";
-            combobox.Visible = false;
-            label1.Visible = false;
-            BoxEnable();
-            //  action = "add";
-        }
-        void editdata()
-        {
-            try
-            {
-                connectionString = ConfigurationManager.ConnectionStrings["myconn"].ToString();
-
-
-                {
-                    byte[] photo = null;
-                    if (this.photo.Image != null)
-                    {
-                        using (MemoryStream ms = new MemoryStream())
-                        {
-                            this.photo.Image.Save(ms, this.photo.Image.RawFormat);
-                            photo = ms.ToArray();
-                        }
-                    }
-                    DateTime parsedDob;
-                    if (!DateTime.TryParse(this.parsedDob.Text, out parsedDob))
-                    {
-                        MessageBox.Show("Please enter a valid date of birth.");
-                        return;
-                    }
-                    using (IDbConnection db = new SqlConnection(connectionString))
-                    {
-                        db.Open();
-                        var UpdateQuery = @"UPDATE STUDENTDETAIL SET FirstName=@fname, LastName= @lname, DOB=@dobb, ContactNumber=@contact, Batch=@batch, Gender=@genderr, Photo=@photo WHERE ID=@id";
-                        var affectedRows = db.Execute(UpdateQuery, new
-                        {
-                            id = combobox.Text,
-                            fname = txtfirstname.Text,
-                            lname = txtlastname.Text,
-                            dobb = parsedDob,
-                            contact = txtcontactnumber.Text,
-                            batch = txtbatch.Text,
-                            genderr = gender,
-                            photo = photo,
-                        });
-                        db.Close();
-                        MessageBox.Show("edited");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-        }
-        private void BoxEnable()
-        {
-            txtfirstname.Enabled = true;
-            txtlastname.Enabled = true;
-            txtbatch.Enabled = true;
-            txtcontactnumber.Enabled = true;
-            parsedDob.Enabled = true;
-            button1.Enabled = true;
-            radioButton1.Enabled = true;
-            radioButton2.Enabled = true;
-        }
-        void fetchDataInTable()
-        {
-                var x = combobox.SelectedItem as User;
-                if (! string.IsNullOrEmpty(combobox.Text))
-                {
-                    txtfirstname.Text = x.FirstName;
-                    txtlastname.Text = x.LastName;
-                    parsedDob.Text = x.DOB;
-                    txtcontactnumber.Text = x.ContactNumber;
-                    txtbatch.Text = x.Batch;
-                    gender = x.Gender;
-                    
-                }
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void combobox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fetchDataInTable();
-        }
-
-        private void remove()
-        {
-
-        }
         private void edit()
         {
             try
@@ -325,7 +165,7 @@ namespace project_clz
                 using (IDbConnection db = new SqlConnection(connectionString))
                 {
                     db.Open();
-                    var UpdateQuery =  @"  
+                    var UpdateQuery = @"  
                     UPDATE[STUDENTDETAIL]
                 SET FirstName = @fname,
                     LastName = @lname,
@@ -357,35 +197,157 @@ namespace project_clz
             }
 
         }
-    } 
-}
 
-    /*    private void button3_Click_1(object sender, EventArgs e)
+
+
+
+        public void fetchcomplaindata()
         {
-            editdata();
+            try
+            {
+                string conStr = @"Data Source=SZN;Initial Catalog=LibararySystem;Integrated Security=True"; //DESKTOP-LG8ALSU\SQLEXPRESS
+                using (SqlConnection con = new SqlConnection(conStr))
+                using (IDbConnection db = new SqlConnection(connectionString))
+                {
+                    db.Open();
+                    var data = db.Query<User>("SELECT * FROM STUDENTDETAIL");
+
+                    // Check if data contains any items
+                    if (data != null && data.Any())
+                    {
+                        // Assuming complainid is a valid property of the complain class
+                        combobox.DataSource = data.ToList();
+                        combobox.ValueMember = "ID"; // Corrected
+                        combobox.DisplayMember = "ID"; // Corrected
+                        combobox.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No data found.");
+                    }
+
+                    db.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error fetching data: " + ex.Message);
+            }
+
         }
 
-        private void dob_ValueChanged(object sender, EventArgs e)
+        void fetchDataInTable()
         {
+            var x = combobox.SelectedItem as User;
+            if (!string.IsNullOrEmpty(combobox.Text))
+            {
+                txtfirstname.Text = x.FirstName;
+                txtlastname.Text = x.LastName;
+                parsedDob.Text = x.DOB;
+                txtcontactnumber.Text = x.ContactNumber;
+                txtbatch.Text = x.Batch;
+                gender = x.Gender;
 
+                // Handle photo
+                if (x.Photo != null && x.Photo.Length > 0)
+                {
+                    try
+                    {
+                        using (var ms = new MemoryStream(x.Photo))
+                        {
+                            var img = Image.FromStream(ms);
+                            photo.Image = new Bitmap(img); // Create new bitmap to avoid disposal issues
+                        }
+                    }
+                    catch (Exception imgEx)
+                    {
+                        MessageBox.Show($"Error loading photo: {imgEx.Message}");
+                        photo.Image = null;
+                    }
+                }
+                else
+                {
+                    photo.Image = null;
+                }
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void BoxEnable()
         {
-
+            txtfirstname.Enabled = true;
+            txtlastname.Enabled = true;
+            txtbatch.Enabled = true;
+            txtcontactnumber.Enabled = true;
+            parsedDob.Enabled = true;
+            button1.Enabled = true;
+            radioButton1.Enabled = true;
+            radioButton2.Enabled = true;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        // CLEARING BOXE 
+        private void ClearBoxes()
         {
-
+            txtfirstname.Text = "";
+            txtlastname.Text = "";
+            txtbatch.Text = "";
+            txtcontactnumber.Text = "";
+            parsedDob.Value = DateTime.Now; // For DateTimePicker
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            photo.Image = null;
         }
 
+        // ADD AND MODIFY BY SAVE BUTTON
+        private void NEW_Click(object sender, EventArgs e)
+        {
+            ClearBoxes();
+            action = "add";  // Explicitly set the action
+            BoxEnable();
+            combobox.Visible = false;
+            label1.Visible = false;
+        }
+        private void txtmodify_Click_1(object sender, EventArgs e)
+        {
+            action = "editt";  // Explicitly set the action
+            BoxEnable();
+            combobox.Visible = true;
+            label1.Visible = true;
+            fetchDataInTable();
+            fetchcomplaindata();
+        }
         private void combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fetchDataInTable();
+           fetchDataInTable();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ClearBoxes();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //private void OnlyNumbers(KeyPressEventArgs e)
+        //{
+        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+        //    {
+        //        e.Handled = true; // block the key if it's not a number
+        //    }
+        //}
+
+
+        //private void txtcontactnumber_TextChanged(object sender, EventArgs e)
+        //{
+        //    OnlyNumbers(e); // allow only digits
+
+        //    // Limit to 10 digits
+        //    if (txtcontactnumber.Text.Length >= 10 && !char.IsControl(e.KeyChar))
+        //    {
+        //        e.Handled = true; // stop typing if already 10 digits
+        //    }
+        //}
     }
-}*/
-    
-
-
+}

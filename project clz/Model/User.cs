@@ -15,7 +15,11 @@ namespace project_clz.Model
         public string ContactNumber { get; set; }
         public string Batch { get; set; }
         public string Gender { get; set; }
-    
+        public byte[] Photo { get; set; }
+        //public static implicit operator User(User v)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
 

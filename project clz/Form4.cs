@@ -88,14 +88,36 @@ namespace project_clz
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            var login = new Form1();
+            var cont = new Form1();
             this.Hide();
-            login.ShowDialog();
+            cont.ShowDialog();
             this.Show();
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            //var cont = new Form1();
+            //this.Hide();
+            //cont.ShowDialog();
+            //this.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }

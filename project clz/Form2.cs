@@ -69,8 +69,10 @@ namespace project_clz
         {
             try
             {
+               //FOR MY SQLSERVER:
+               //string conStr = "Server=localhost;Port=3306;Database=library_system;Uid=root;Pwd=;Charset=utf8mb4;";
 
-                string conStr = @"Data Source=SZN;Initial Catalog=LibararySystem;Integrated Security=True"; //DESKTOP-LG8ALSU\SQLEXPRESS
+               string conStr = @"Data Source=SZN;Initial Catalog=LibararySystem;Integrated Security=True"; //DESKTOP-LG8ALSU\SQLEXPRESS
                 string query = "INSERT INTO project_clz (Username, email, Password, Contact, Fullname ) VALUES (@name, @email, @password, @contact, @fullname)";
 
                 using (SqlConnection con = new SqlConnection(conStr))
@@ -121,6 +123,11 @@ namespace project_clz
 
         }
         private void txtcheckpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusername_TextChanged(object sender, EventArgs e)
         {
 
         }
