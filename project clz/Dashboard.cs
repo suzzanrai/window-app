@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using project_clz.Model;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace project_clz
+{
+    public partial class Dashboard : Form
+    {
+        public Dashboard()
+        {
+            InitializeComponent();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var book = new Form3();
+            this.Hide();
+            book.ShowDialog();
+            this.Show();
+        }
+
+        private void addStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var add = new add();
+            this.Hide();
+            add.ShowDialog();
+            this.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var cont = new Form1();
+            this.Hide();
+            cont.ShowDialog();
+            this.Show();
+        }
+
+        private void issueBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var cont = new Form5();
+            this.Hide();
+            cont.ShowDialog();
+            this.Show();
+        }
+
+        private void returnBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var cont = new Form6();
+            this.Hide();
+            cont.ShowDialog();
+            this.Show();
+        }
+
+        private void bookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

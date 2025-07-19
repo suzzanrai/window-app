@@ -8,10 +8,11 @@ namespace project_clz.Model
 {
     internal class Book
     {
-        public string BookId { get; set; }
+        public int BookId { get; set; }
         public string BookName { get; set; }
 
         public string Faculty  { get; set; }
         public string  Semester { get; set; }
+        public int Quantity { get; set; }
     }
 }

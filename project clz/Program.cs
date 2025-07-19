@@ -17,7 +17,8 @@ namespace project_clz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Report());
+            Application.Run(new Form1
+                ());
         }
     }
 }

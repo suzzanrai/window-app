@@ -232,7 +232,7 @@ namespace project_clz
                     {
                         // Authentication successful
                         MessageBox.Show("Login successful!");
-                        var dashboard = new Form4();
+                        var dashboard = new Dashboard();
                         dashboard.ShowDialog();
                         this.Close();
                         // Proceed to the next form or main application
@@ -256,6 +256,16 @@ namespace project_clz
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void lusername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lpassword_Click(object sender, EventArgs e)
         {
 
         }

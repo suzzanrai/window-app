@@ -29,6 +29,7 @@ namespace project_clz
         string gender;
         string action;
         private string connectionString;
+        private object studentId;
 
         public add()
         {
@@ -86,6 +87,10 @@ namespace project_clz
             {
                 edit();
             }
+            else if ( action == "delete")
+            {
+                delete();
+            }
         }
 
         private void save()
@@ -127,7 +132,11 @@ namespace project_clz
                         genderr = gender,
                         photo = photo,
                     });
-
+                    if (affectedRows != null)
+                    {
+                        combobox.Text = affectedRows.ToString();
+                        //MessageBox.Show("Record inserted successfully. New ID: " + affectedRows);
+                    }
                     MessageBox.Show("Record inserted successfully.");
                 }
             }
@@ -198,7 +207,48 @@ namespace project_clz
 
         }
 
+        //delete
+        private void delete()
+        {
 
+            try
+            {
+                int studentId;
+                if (!int.TryParse(combobox.Text, out studentId))
+                {
+                    MessageBox.Show("Please select a valid student ID.");
+                    return;
+                }
+
+                using (IDbConnection db = new SqlConnection(connectionString))
+                {
+                    db.Open();
+                    var deleteQuery = @"DELETE FROM STUDENTDETAIL WHERE ID = @id";
+
+                    var affectedRows = db.Execute(deleteQuery, new
+                    {
+                        id = studentId
+                    });
+
+                    if (affectedRows > 0)
+                    {
+                        MessageBox.Show("Record deleted successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No record found with the specified ID.");
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show($"Database error: {sqlEx.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting data: {ex.Message}");
+            }
+        }
 
 
         public void fetchcomplaindata()
@@ -272,6 +322,8 @@ namespace project_clz
             }
         }
 
+       
+
         private void BoxEnable()
         {
             txtfirstname.Enabled = true;
@@ -315,6 +367,15 @@ namespace project_clz
             fetchDataInTable();
             fetchcomplaindata();
         }
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            action = "delete";  // Explicitly set the action
+            BoxEnable();
+            combobox.Visible = true;
+            label1.Visible = true;
+            fetchDataInTable();
+            fetchcomplaindata();
+        }
         private void combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
            fetchDataInTable();
@@ -329,6 +390,8 @@ namespace project_clz
         {
             this.Close();
         }
+
+      
 
         //private void OnlyNumbers(KeyPressEventArgs e)
         //{
