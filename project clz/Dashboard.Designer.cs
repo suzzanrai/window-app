@@ -83,7 +83,7 @@
             this.addBookToolStripMenuItem.Image = global::project_clz.Properties.Resources.icons8_add_book_50;
             this.addBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(254, 56);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(192, 56);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
             // 
@@ -92,7 +92,7 @@
             this.viewBookToolStripMenuItem.Image = global::project_clz.Properties.Resources.icons8_search_50_2;
             this.viewBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.viewBookToolStripMenuItem.Name = "viewBookToolStripMenuItem";
-            this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(254, 56);
+            this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(192, 56);
             this.viewBookToolStripMenuItem.Text = "View Book";
             this.viewBookToolStripMenuItem.Click += new System.EventHandler(this.viewBookToolStripMenuItem_Click);
             // 
@@ -112,7 +112,7 @@
             this.addStudentToolStripMenuItem.Image = global::project_clz.Properties.Resources.icons8_student_50_2;
             this.addStudentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem";
-            this.addStudentToolStripMenuItem.Size = new System.Drawing.Size(254, 56);
+            this.addStudentToolStripMenuItem.Size = new System.Drawing.Size(209, 56);
             this.addStudentToolStripMenuItem.Text = "Add Student";
             this.addStudentToolStripMenuItem.Click += new System.EventHandler(this.addStudentToolStripMenuItem_Click);
             // 
@@ -121,8 +121,9 @@
             this.viewStudentToolStripMenuItem.Image = global::project_clz.Properties.Resources.icons8_search_50_2;
             this.viewStudentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.viewStudentToolStripMenuItem.Name = "viewStudentToolStripMenuItem";
-            this.viewStudentToolStripMenuItem.Size = new System.Drawing.Size(254, 56);
+            this.viewStudentToolStripMenuItem.Size = new System.Drawing.Size(209, 56);
             this.viewStudentToolStripMenuItem.Text = "View Student";
+            this.viewStudentToolStripMenuItem.Click += new System.EventHandler(this.viewStudentToolStripMenuItem_Click);
             // 
             // issueBookToolStripMenuItem
             // 
@@ -152,6 +153,7 @@
             this.viewBookDetailToolStripMenuItem.Name = "viewBookDetailToolStripMenuItem";
             this.viewBookDetailToolStripMenuItem.Size = new System.Drawing.Size(187, 54);
             this.viewBookDetailToolStripMenuItem.Text = "View Book Detail";
+            this.viewBookDetailToolStripMenuItem.Click += new System.EventHandler(this.viewBookDetailToolStripMenuItem_Click);
             // 
             // issueBookToolStripMenuItem1
             // 
@@ -160,6 +162,7 @@
             this.issueBookToolStripMenuItem1.Name = "issueBookToolStripMenuItem1";
             this.issueBookToolStripMenuItem1.Size = new System.Drawing.Size(268, 70);
             this.issueBookToolStripMenuItem1.Text = "Issue Book";
+            this.issueBookToolStripMenuItem1.Click += new System.EventHandler(this.issueBookToolStripMenuItem1_Click);
             // 
             // returnBookToolStripMenuItem1
             // 
@@ -168,6 +171,7 @@
             this.returnBookToolStripMenuItem1.Name = "returnBookToolStripMenuItem1";
             this.returnBookToolStripMenuItem1.Size = new System.Drawing.Size(268, 70);
             this.returnBookToolStripMenuItem1.Text = "Return Book";
+            this.returnBookToolStripMenuItem1.Click += new System.EventHandler(this.returnBookToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 

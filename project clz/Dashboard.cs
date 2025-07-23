@@ -27,6 +27,10 @@ namespace project_clz
 
         private void viewBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var view = new ViewBook();
+            this.Hide();
+            view.ShowDialog();
+            this.Show();
         }
 
         private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,6 +76,35 @@ namespace project_clz
         private void bookToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var view = new StudentDetail();
+            this.Hide();
+            view.ShowDialog();
+            this.Show();
+        }
+
+        private void viewBookDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void issueBookToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var view = new ViewIssueBook();
+            this.Hide();
+            view.ShowDialog();
+            this.Show();
+        }
+
+        private void returnBookToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var view = new ViewReturnBook();
+            this.Hide();
+            view.ShowDialog();
+            this.Show();
         }
     }
 }

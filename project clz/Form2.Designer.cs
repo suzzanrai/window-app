@@ -64,6 +64,7 @@
             // smail
             // 
             this.smail.AutoSize = true;
+            this.smail.BackColor = System.Drawing.Color.Transparent;
             this.smail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.smail.Location = new System.Drawing.Point(156, 266);
             this.smail.Name = "smail";
@@ -75,32 +76,38 @@
             // scpassowrd
             // 
             this.scpassowrd.AutoSize = true;
+            this.scpassowrd.BackColor = System.Drawing.Color.Transparent;
             this.scpassowrd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scpassowrd.Location = new System.Drawing.Point(154, 486);
             this.scpassowrd.Name = "scpassowrd";
             this.scpassowrd.Size = new System.Drawing.Size(136, 18);
             this.scpassowrd.TabIndex = 3;
             this.scpassowrd.Text = "Check Password";
+            this.scpassowrd.Click += new System.EventHandler(this.scpassowrd_Click);
             // 
             // spassword
             // 
             this.spassword.AutoSize = true;
+            this.spassword.BackColor = System.Drawing.Color.Transparent;
             this.spassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spassword.Location = new System.Drawing.Point(156, 405);
             this.spassword.Name = "spassword";
             this.spassword.Size = new System.Drawing.Size(83, 18);
             this.spassword.TabIndex = 4;
             this.spassword.Text = "Password";
+            this.spassword.Click += new System.EventHandler(this.spassword_Click);
             // 
             // susername
             // 
             this.susername.AutoSize = true;
+            this.susername.BackColor = System.Drawing.Color.Transparent;
             this.susername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.susername.Location = new System.Drawing.Point(154, 132);
             this.susername.Name = "susername";
             this.susername.Size = new System.Drawing.Size(93, 18);
             this.susername.TabIndex = 5;
             this.susername.Text = "User Name";
+            this.susername.Click += new System.EventHandler(this.susername_Click);
             // 
             // txtpassword
             // 
@@ -167,22 +174,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(156, 338);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 18);
             this.label2.TabIndex = 14;
             this.label2.Text = "Conatact";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(156, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Full Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtfullname
             // 
@@ -203,6 +214,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(251, 547);
             this.label4.Name = "label4";
@@ -210,12 +222,13 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Incorrect Password";
             this.label4.Visible = false;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.pictureBox2.Image = global::project_clz.Properties.Resources.icons8_cross_30;
-            this.pictureBox2.Location = new System.Drawing.Point(1088, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(1116, 4);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(72, 49);
@@ -226,13 +239,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::project_clz.Properties.Resources.scis_bl0417_2_119;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1173, 683);
+            this.pictureBox1.Size = new System.Drawing.Size(1192, 683);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -243,7 +256,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1173, 683);
+            this.ClientSize = new System.Drawing.Size(1192, 683);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtcontact);
             this.Controls.Add(this.txtfullname);

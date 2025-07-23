@@ -373,6 +373,16 @@ namespace project_clz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images1 {
+            get {
+                object obj = ResourceManager.GetObject("images1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1143673268_2048x2048 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1143673268-2048x2048", resourceCulture);
@@ -386,6 +396,16 @@ namespace project_clz.Properties {
         internal static System.Drawing.Bitmap istockphoto_1143673268_2048x20481 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1143673268-2048x20481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KGF_WebAssets_06 {
+            get {
+                object obj = ResourceManager.GetObject("KGF-WebAssets-06", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -232,9 +232,10 @@ namespace project_clz
                     {
                         // Authentication successful
                         MessageBox.Show("Login successful!");
+                        this.Hide();
                         var dashboard = new Dashboard();
                         dashboard.ShowDialog();
-                        this.Close();
+                       // this.Close();
                         // Proceed to the next form or main application
                     }
                     else

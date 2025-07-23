@@ -211,6 +211,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Book.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -229,6 +234,18 @@
     </Compile>
     <Compile Include="Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ReturnBook.cs" />
+    <Compile Include="ViewBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBook.Designer.cs">
+      <DependentUpon>ViewBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Users.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\IssueBook.cs" />
@@ -273,6 +290,19 @@
     <Compile Include="StudentDetail.Designer.cs">
       <DependentUpon>StudentDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs" />
+    <Compile Include="ViewIssueBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewIssueBook.Designer.cs">
+      <DependentUpon>ViewIssueBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReturnBook.Designer.cs">
+      <DependentUpon>ViewReturnBook.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +327,9 @@
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewBook.resx">
+      <DependentUpon>ViewBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -310,6 +343,34 @@
     <EmbeddedResource Include="StudentDetail.resx">
       <DependentUpon>StudentDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewIssueBook.resx">
+      <DependentUpon>ViewIssueBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReturnBook.resx">
+      <DependentUpon>ViewReturnBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Book.xsc">
+      <DependentUpon>Book.xsd</DependentUpon>
+    </None>
+    <None Include="Book.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Book.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Book.xss">
+      <DependentUpon>Book.xsd</DependentUpon>
+    </None>
+    <None Include="Users.xsc">
+      <DependentUpon>Users.xsd</DependentUpon>
+    </None>
+    <None Include="Users.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Users.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Users.xss">
+      <DependentUpon>Users.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -397,6 +458,7 @@
     <None Include="Resources\icons8-book-50.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Database\" />
     <Folder Include="parsedDob\" />
   </ItemGroup>
   <ItemGroup>
@@ -455,6 +517,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-open-book-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KGF-WebAssets-06.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

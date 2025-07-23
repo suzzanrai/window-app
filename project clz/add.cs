@@ -364,8 +364,9 @@ namespace project_clz
             BoxEnable();
             combobox.Visible = true;
             label1.Visible = true;
-            fetchDataInTable();
+           
             fetchcomplaindata();
+            fetchDataInTable();
         }
         private void button4_Click_1(object sender, EventArgs e)
         {
@@ -373,8 +374,9 @@ namespace project_clz
             BoxEnable();
             combobox.Visible = true;
             label1.Visible = true;
-            fetchDataInTable();
+           
             fetchcomplaindata();
+            fetchDataInTable();
         }
         private void combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -391,7 +393,12 @@ namespace project_clz
             this.Close();
         }
 
-      
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
 
         //private void OnlyNumbers(KeyPressEventArgs e)
         //{

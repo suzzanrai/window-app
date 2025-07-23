@@ -35,7 +35,9 @@
             this.txtbookide = new System.Windows.Forms.TextBox();
             this.txtsemester = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtpublication = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.bbookname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bbookid = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,7 +59,9 @@
             // panel1
             // 
             this.panel1.AllowDrop = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.BackgroundImage = global::project_clz.Properties.Resources.KGF_WebAssets_06;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.quantity);
@@ -85,7 +87,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1220, 610);
+            this.panel1.Size = new System.Drawing.Size(1216, 578);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -102,7 +104,7 @@
             "VI",
             "VII",
             "VII"});
-            this.textBox1.Location = new System.Drawing.Point(936, 272);
+            this.textBox1.Location = new System.Drawing.Point(870, 314);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 26);
             this.textBox1.TabIndex = 27;
@@ -110,8 +112,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(527, 5);
+            this.label2.Location = new System.Drawing.Point(554, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(298, 36);
             this.label2.TabIndex = 26;
@@ -121,7 +124,7 @@
             // quantity
             // 
             this.quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity.Location = new System.Drawing.Point(937, 138);
+            this.quantity.Location = new System.Drawing.Point(871, 180);
             this.quantity.Name = "quantity";
             this.quantity.Size = new System.Drawing.Size(69, 24);
             this.quantity.TabIndex = 23;
@@ -129,7 +132,7 @@
             // txtbookide
             // 
             this.txtbookide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbookide.Location = new System.Drawing.Point(936, 94);
+            this.txtbookide.Location = new System.Drawing.Point(870, 136);
             this.txtbookide.Name = "txtbookide";
             this.txtbookide.Size = new System.Drawing.Size(69, 24);
             this.txtbookide.TabIndex = 23;
@@ -137,8 +140,9 @@
             // txtsemester
             // 
             this.txtsemester.AutoSize = true;
+            this.txtsemester.BackColor = System.Drawing.Color.Transparent;
             this.txtsemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsemester.Location = new System.Drawing.Point(825, 280);
+            this.txtsemester.Location = new System.Drawing.Point(759, 322);
             this.txtsemester.Name = "txtsemester";
             this.txtsemester.Size = new System.Drawing.Size(80, 18);
             this.txtsemester.TabIndex = 21;
@@ -149,11 +153,23 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(530, 515);
+            this.label7.Location = new System.Drawing.Point(543, 519);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(195, 16);
             this.label7.TabIndex = 18;
             this.label7.Text = "Gomendra Multiple College";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox3.Image = global::project_clz.Properties.Resources._66982lms;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 113);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(741, 428);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
             // 
             // label8
             // 
@@ -163,10 +179,22 @@
             this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 19;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::project_clz.Properties.Resources.icons8_cross_30;
+            this.pictureBox2.Location = new System.Drawing.Point(1138, 16);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1058, 463);
+            this.button3.Location = new System.Drawing.Point(992, 505);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(81, 30);
@@ -178,7 +206,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(951, 463);
+            this.button2.Location = new System.Drawing.Point(885, 505);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 30);
@@ -190,7 +218,7 @@
             // txtpublication
             // 
             this.txtpublication.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpublication.Location = new System.Drawing.Point(936, 371);
+            this.txtpublication.Location = new System.Drawing.Point(870, 413);
             this.txtpublication.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtpublication.Name = "txtpublication";
             this.txtpublication.Size = new System.Drawing.Size(195, 24);
@@ -200,8 +228,9 @@
             // bpublication
             // 
             this.bpublication.AutoSize = true;
+            this.bpublication.BackColor = System.Drawing.Color.Transparent;
             this.bpublication.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bpublication.Location = new System.Drawing.Point(824, 376);
+            this.bpublication.Location = new System.Drawing.Point(758, 418);
             this.bpublication.Name = "bpublication";
             this.bpublication.Size = new System.Drawing.Size(91, 18);
             this.bpublication.TabIndex = 10;
@@ -211,7 +240,7 @@
             // txtauthor
             // 
             this.txtauthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtauthor.Location = new System.Drawing.Point(936, 327);
+            this.txtauthor.Location = new System.Drawing.Point(870, 369);
             this.txtauthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtauthor.Name = "txtauthor";
             this.txtauthor.Size = new System.Drawing.Size(195, 24);
@@ -221,8 +250,9 @@
             // bauthor
             // 
             this.bauthor.AutoSize = true;
+            this.bauthor.BackColor = System.Drawing.Color.Transparent;
             this.bauthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bauthor.Location = new System.Drawing.Point(824, 332);
+            this.bauthor.Location = new System.Drawing.Point(758, 374);
             this.bauthor.Name = "bauthor";
             this.bauthor.Size = new System.Drawing.Size(57, 18);
             this.bauthor.TabIndex = 8;
@@ -235,7 +265,7 @@
             this.txtfaculty.Items.AddRange(new object[] {
             "BCA",
             "BBA"});
-            this.txtfaculty.Location = new System.Drawing.Point(936, 231);
+            this.txtfaculty.Location = new System.Drawing.Point(870, 273);
             this.txtfaculty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtfaculty.Name = "txtfaculty";
             this.txtfaculty.Size = new System.Drawing.Size(195, 26);
@@ -245,8 +275,9 @@
             // bfaculty
             // 
             this.bfaculty.AutoSize = true;
+            this.bfaculty.BackColor = System.Drawing.Color.Transparent;
             this.bfaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bfaculty.Location = new System.Drawing.Point(824, 231);
+            this.bfaculty.Location = new System.Drawing.Point(758, 273);
             this.bfaculty.Name = "bfaculty";
             this.bfaculty.Size = new System.Drawing.Size(62, 18);
             this.bfaculty.TabIndex = 6;
@@ -255,7 +286,7 @@
             // txtbookname
             // 
             this.txtbookname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbookname.Location = new System.Drawing.Point(936, 183);
+            this.txtbookname.Location = new System.Drawing.Point(870, 225);
             this.txtbookname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbookname.Name = "txtbookname";
             this.txtbookname.Size = new System.Drawing.Size(195, 24);
@@ -265,7 +296,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(849, 335);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(783, 377);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 16);
             this.label3.TabIndex = 3;
@@ -273,8 +305,9 @@
             // bbookname
             // 
             this.bbookname.AutoSize = true;
+            this.bbookname.BackColor = System.Drawing.Color.Transparent;
             this.bbookname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bbookname.Location = new System.Drawing.Point(824, 186);
+            this.bbookname.Location = new System.Drawing.Point(758, 228);
             this.bbookname.Name = "bbookname";
             this.bbookname.Size = new System.Drawing.Size(97, 18);
             this.bbookname.TabIndex = 2;
@@ -283,8 +316,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(825, 144);
+            this.label1.Location = new System.Drawing.Point(759, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 18);
             this.label1.TabIndex = 1;
@@ -293,35 +327,13 @@
             // bbookid
             // 
             this.bbookid.AutoSize = true;
+            this.bbookid.BackColor = System.Drawing.Color.Transparent;
             this.bbookid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bbookid.Location = new System.Drawing.Point(825, 100);
+            this.bbookid.Location = new System.Drawing.Point(759, 142);
             this.bbookid.Name = "bbookid";
             this.bbookid.Size = new System.Drawing.Size(69, 18);
             this.bbookid.TabIndex = 1;
             this.bbookid.Text = "Book ID";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::project_clz.Properties.Resources._66982lms;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 60);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(715, 478);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::project_clz.Properties.Resources.icons8_cross_30;
-            this.pictureBox2.Location = new System.Drawing.Point(1143, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // Form3
             // 

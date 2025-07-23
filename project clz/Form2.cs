@@ -131,6 +131,36 @@ namespace project_clz
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void susername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scpassowrd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

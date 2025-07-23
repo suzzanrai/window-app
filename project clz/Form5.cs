@@ -21,17 +21,28 @@ namespace project_clz
 {
     public partial class Form5 : Form
     {
+        private bool isFormLoading=true;
         private string connectionString;
 
+        //public Form5()
+        //{
+        //    InitializeComponent();
+        //    connectionString = ConfigurationManager.ConnectionStrings["myconn"].ConnectionString;
+        //    //Populate ComboBox on form load
+        //    FetchDataStudent();
+        //    FetchDataBook();
+
+
+        //}
         public Form5()
         {
             InitializeComponent();
             connectionString = ConfigurationManager.ConnectionStrings["myconn"].ConnectionString;
-            //Populate ComboBox on form load
             FetchDataStudent();
             FetchDataBook();
-        }
 
+            isFormLoading = false; // Data is loaded
+        }
         private void label1_Click(object sender, EventArgs e)
         {
         }
@@ -217,7 +228,7 @@ namespace project_clz
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            //
+            
             ReturnBook();
             fetchDataInTable();
         }
@@ -482,25 +493,48 @@ namespace project_clz
                 MessageBox.Show($"Error fetching data: {ex.Message}");
             }
         }
+        //void fetchDataInTable()
+        //{
+        //    var x = comboBox3.SelectedItem as IssueBook;
+        //    if (!string.IsNullOrEmpty(comboBox3.Text))
+        //    {
+        //        textBox10.Text = x.StudentName;
+        //        textBox9.Text = x.Contact;
+        //        dateTimePicker2.Value = x.IssueDate; // Assign IssueDate to dateTimePicker2
+        //        textBox7.Text = x.Contact;
+        //        comboBox4.Text = x.BookID.ToString();
+        //        textBox12.Text = x.BookName;
+        //        textBox8.Text = x.Semester;
+        //        textBox9.Text = x.Faculty;
+
+        //        // Handle photo
+
+
+        //    }
+        //}
         void fetchDataInTable()
         {
             var x = comboBox3.SelectedItem as IssueBook;
-            if (!string.IsNullOrEmpty(comboBox3.Text))
+            if (x != null && !string.IsNullOrEmpty(comboBox3.Text))
             {
                 textBox10.Text = x.StudentName;
                 textBox9.Text = x.Contact;
-                dateTimePicker2.Value = x.IssueDate; // Assign IssueDate to dateTimePicker2
+                dateTimePicker2.Value = x.IssueDate;
                 textBox7.Text = x.Contact;
-                comboBox4.Text = x.BookID.ToString(); 
+                comboBox4.Text = x.BookID.ToString();
                 textBox12.Text = x.BookName;
                 textBox8.Text = x.Semester;
                 textBox9.Text = x.Faculty;
-
-                // Handle photo
-
-
+            }
+            else
+            {
+                MessageBox.Show("Selected item is invalid or empty.");
             }
         }
+
+      
+
+
 
         private void label10_Click(object sender, EventArgs e)
         {
@@ -520,13 +554,19 @@ namespace project_clz
   
         private void comboBox3_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            fetchingBookData();
+            if (!isFormLoading)
+            {
+                fetchingBookData();
+            }
 
         }
 
         private void comboBox4_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            fetchingID();
+            if (!isFormLoading)
+            {
+                fetchingID();
+            }
 
         }
 
@@ -538,6 +578,11 @@ namespace project_clz
         private void button5_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint_2(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

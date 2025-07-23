@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,8 +51,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // 
             this.panel1.BackgroundImage = global::project_clz.Properties.Resources.online_edu_needs_editing;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBox3);
@@ -80,17 +82,40 @@
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(8, 7);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1187, 547);
+            this.panel1.Size = new System.Drawing.Size(1129, 554);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::project_clz.Properties.Resources.icons8_cross_30;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Location = new System.Drawing.Point(1130, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(52, 47);
+            this.button5.TabIndex = 92;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(481, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 25);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "RETURN BOOK";
             // 
             // comboBox3
             // 
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(921, 137);
+            this.comboBox3.Location = new System.Drawing.Point(880, 134);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(51, 26);
             this.comboBox3.TabIndex = 90;
@@ -124,7 +149,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Window;
-            this.label10.Location = new System.Drawing.Point(745, 317);
+            this.label10.Location = new System.Drawing.Point(704, 314);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 18);
             this.label10.TabIndex = 83;
@@ -136,7 +161,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Window;
-            this.label11.Location = new System.Drawing.Point(745, 262);
+            this.label11.Location = new System.Drawing.Point(704, 259);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 18);
             this.label11.TabIndex = 84;
@@ -145,7 +170,7 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(921, 311);
+            this.textBox8.Location = new System.Drawing.Point(880, 308);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(144, 24);
             this.textBox8.TabIndex = 85;
@@ -154,7 +179,7 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(921, 259);
+            this.textBox9.Location = new System.Drawing.Point(880, 256);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(144, 24);
             this.textBox9.TabIndex = 86;
@@ -184,7 +209,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Window;
-            this.label12.Location = new System.Drawing.Point(745, 201);
+            this.label12.Location = new System.Drawing.Point(704, 198);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 18);
             this.label12.TabIndex = 77;
@@ -223,7 +248,7 @@
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(921, 198);
+            this.textBox12.Location = new System.Drawing.Point(880, 195);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(144, 24);
             this.textBox12.TabIndex = 82;
@@ -271,7 +296,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.Window;
-            this.label17.Location = new System.Drawing.Point(745, 140);
+            this.label17.Location = new System.Drawing.Point(704, 137);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(119, 18);
             this.label17.TabIndex = 74;
@@ -279,9 +304,9 @@
             // 
             // button3
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(849, 473);
+            this.button3.Location = new System.Drawing.Point(827, 459);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 37);
             this.button3.TabIndex = 72;
@@ -290,9 +315,9 @@
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(971, 473);
+            this.button1.Location = new System.Drawing.Point(949, 459);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 37);
             this.button1.TabIndex = 71;
@@ -300,32 +325,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(481, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 25);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "RETURN BOOK";
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::project_clz.Properties.Resources.icons8_cross_30;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Location = new System.Drawing.Point(1130, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(52, 47);
-            this.button5.TabIndex = 92;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button2.BackgroundImage = global::project_clz.Properties.Resources.icons8_cross_30;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(1074, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(52, 47);
+            this.button2.TabIndex = 93;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1202, 563);
+            this.ClientSize = new System.Drawing.Size(1135, 560);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form6";
@@ -361,5 +376,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button2;
     }
 }

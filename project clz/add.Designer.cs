@@ -30,6 +30,9 @@ namespace project_clz
         /// </summary>
         private void InitializeComponent()
         {
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.fileSystemWatcher2 = new System.IO.FileSystemWatcher();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -57,21 +60,34 @@ namespace project_clz
             this.stfname = new System.Windows.Forms.Label();
             this.lable1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.fileSystemWatcher2 = new System.IO.FileSystemWatcher();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // fileSystemWatcher2
+            // 
+            this.fileSystemWatcher2.EnableRaisingEvents = true;
+            this.fileSystemWatcher2.SynchronizingObject = this;
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.BackgroundImage = global::project_clz.Properties.Resources.KGF_WebAssets_06;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button3);
@@ -98,16 +114,17 @@ namespace project_clz
             this.panel1.Controls.Add(this.stfname);
             this.panel1.Controls.Add(this.lable1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(7, 7);
+            this.panel1.Location = new System.Drawing.Point(-1, 7);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1220, 610);
+            this.panel1.Size = new System.Drawing.Size(1228, 646);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(233, 61);
+            this.button4.Location = new System.Drawing.Point(1057, 49);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(101, 37);
             this.button4.TabIndex = 30;
@@ -130,7 +147,7 @@ namespace project_clz
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(235, 551);
+            this.button3.Location = new System.Drawing.Point(982, 577);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 39);
             this.button3.TabIndex = 28;
@@ -141,7 +158,7 @@ namespace project_clz
             // NEW
             // 
             this.NEW.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NEW.Location = new System.Drawing.Point(42, 62);
+            this.NEW.Location = new System.Drawing.Point(826, 50);
             this.NEW.Name = "NEW";
             this.NEW.Size = new System.Drawing.Size(93, 36);
             this.NEW.TabIndex = 27;
@@ -152,8 +169,9 @@ namespace project_clz
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 118);
+            this.label1.Location = new System.Drawing.Point(803, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 18);
             this.label1.TabIndex = 25;
@@ -164,7 +182,7 @@ namespace project_clz
             // 
             this.combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combobox.FormattingEnabled = true;
-            this.combobox.Location = new System.Drawing.Point(160, 115);
+            this.combobox.Location = new System.Drawing.Point(945, 127);
             this.combobox.Name = "combobox";
             this.combobox.Size = new System.Drawing.Size(67, 26);
             this.combobox.TabIndex = 24;
@@ -174,7 +192,7 @@ namespace project_clz
             // txtmodify
             // 
             this.txtmodify.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmodify.Location = new System.Drawing.Point(141, 61);
+            this.txtmodify.Location = new System.Drawing.Point(945, 49);
             this.txtmodify.Name = "txtmodify";
             this.txtmodify.Size = new System.Drawing.Size(86, 37);
             this.txtmodify.TabIndex = 23;
@@ -185,7 +203,7 @@ namespace project_clz
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(339, 551);
+            this.button2.Location = new System.Drawing.Point(1086, 577);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 39);
             this.button2.TabIndex = 22;
@@ -196,38 +214,42 @@ namespace project_clz
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Enabled = false;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(248, 382);
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButton2.Location = new System.Drawing.Point(1033, 394);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(84, 22);
             this.radioButton2.TabIndex = 21;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.UseVisualStyleBackColor = false;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Enabled = false;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(160, 382);
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButton1.Location = new System.Drawing.Point(945, 394);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(65, 22);
             this.radioButton1.TabIndex = 20;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // txtbatch
             // 
             this.txtbatch.Enabled = false;
             this.txtbatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbatch.Location = new System.Drawing.Point(160, 336);
+            this.txtbatch.Location = new System.Drawing.Point(945, 348);
             this.txtbatch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbatch.Name = "txtbatch";
             this.txtbatch.Size = new System.Drawing.Size(231, 24);
@@ -236,8 +258,9 @@ namespace project_clz
             // stbatch
             // 
             this.stbatch.AutoSize = true;
+            this.stbatch.BackColor = System.Drawing.Color.Transparent;
             this.stbatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stbatch.Location = new System.Drawing.Point(39, 334);
+            this.stbatch.Location = new System.Drawing.Point(803, 346);
             this.stbatch.Name = "stbatch";
             this.stbatch.Size = new System.Drawing.Size(51, 18);
             this.stbatch.TabIndex = 17;
@@ -245,15 +268,17 @@ namespace project_clz
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(160, 505);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(945, 531);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 23);
+            this.button1.Size = new System.Drawing.Size(116, 31);
             this.button1.TabIndex = 16;
             this.button1.Text = "Uplode Photo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // photo
@@ -261,7 +286,7 @@ namespace project_clz
             this.photo.BackColor = System.Drawing.Color.White;
             this.photo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.photo.Enabled = false;
-            this.photo.Location = new System.Drawing.Point(160, 406);
+            this.photo.Location = new System.Drawing.Point(945, 432);
             this.photo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.photo.Name = "photo";
             this.photo.Size = new System.Drawing.Size(116, 122);
@@ -276,7 +301,7 @@ namespace project_clz
             this.parsedDob.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parsedDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.parsedDob.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
-            this.parsedDob.Location = new System.Drawing.Point(160, 249);
+            this.parsedDob.Location = new System.Drawing.Point(945, 261);
             this.parsedDob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.parsedDob.Name = "parsedDob";
             this.parsedDob.Size = new System.Drawing.Size(231, 22);
@@ -287,7 +312,7 @@ namespace project_clz
             // 
             this.txtfirstname.Enabled = false;
             this.txtfirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfirstname.Location = new System.Drawing.Point(160, 155);
+            this.txtfirstname.Location = new System.Drawing.Point(945, 167);
             this.txtfirstname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.Size = new System.Drawing.Size(233, 24);
@@ -297,7 +322,7 @@ namespace project_clz
             // 
             this.txtcontactnumber.Enabled = false;
             this.txtcontactnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontactnumber.Location = new System.Drawing.Point(160, 290);
+            this.txtcontactnumber.Location = new System.Drawing.Point(945, 302);
             this.txtcontactnumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcontactnumber.Name = "txtcontactnumber";
             this.txtcontactnumber.Size = new System.Drawing.Size(231, 24);
@@ -308,7 +333,7 @@ namespace project_clz
             // 
             this.txtlastname.Enabled = false;
             this.txtlastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlastname.Location = new System.Drawing.Point(160, 203);
+            this.txtlastname.Location = new System.Drawing.Point(945, 215);
             this.txtlastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.Size = new System.Drawing.Size(233, 24);
@@ -317,8 +342,9 @@ namespace project_clz
             // stgender
             // 
             this.stgender.AutoSize = true;
+            this.stgender.BackColor = System.Drawing.Color.Transparent;
             this.stgender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stgender.Location = new System.Drawing.Point(39, 382);
+            this.stgender.Location = new System.Drawing.Point(803, 394);
             this.stgender.Name = "stgender";
             this.stgender.Size = new System.Drawing.Size(63, 18);
             this.stgender.TabIndex = 6;
@@ -327,8 +353,9 @@ namespace project_clz
             // stdate
             // 
             this.stdate.AutoSize = true;
+            this.stdate.BackColor = System.Drawing.Color.Transparent;
             this.stdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stdate.Location = new System.Drawing.Point(39, 249);
+            this.stdate.Location = new System.Drawing.Point(803, 261);
             this.stdate.Name = "stdate";
             this.stdate.Size = new System.Drawing.Size(111, 18);
             this.stdate.TabIndex = 5;
@@ -337,8 +364,9 @@ namespace project_clz
             // stphoto
             // 
             this.stphoto.AutoSize = true;
+            this.stphoto.BackColor = System.Drawing.Color.Transparent;
             this.stphoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stphoto.Location = new System.Drawing.Point(39, 436);
+            this.stphoto.Location = new System.Drawing.Point(803, 448);
             this.stphoto.Name = "stphoto";
             this.stphoto.Size = new System.Drawing.Size(53, 18);
             this.stphoto.TabIndex = 4;
@@ -347,8 +375,9 @@ namespace project_clz
             // stcontact
             // 
             this.stcontact.AutoSize = true;
+            this.stcontact.BackColor = System.Drawing.Color.Transparent;
             this.stcontact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stcontact.Location = new System.Drawing.Point(39, 290);
+            this.stcontact.Location = new System.Drawing.Point(803, 302);
             this.stcontact.Name = "stcontact";
             this.stcontact.Size = new System.Drawing.Size(131, 18);
             this.stcontact.TabIndex = 3;
@@ -357,8 +386,9 @@ namespace project_clz
             // stlname
             // 
             this.stlname.AutoSize = true;
+            this.stlname.BackColor = System.Drawing.Color.Transparent;
             this.stlname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stlname.Location = new System.Drawing.Point(39, 203);
+            this.stlname.Location = new System.Drawing.Point(803, 215);
             this.stlname.Name = "stlname";
             this.stlname.Size = new System.Drawing.Size(89, 18);
             this.stlname.TabIndex = 2;
@@ -369,7 +399,7 @@ namespace project_clz
             this.stfname.AutoSize = true;
             this.stfname.BackColor = System.Drawing.Color.Transparent;
             this.stfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stfname.Location = new System.Drawing.Point(39, 155);
+            this.stfname.Location = new System.Drawing.Point(803, 167);
             this.stfname.Name = "stfname";
             this.stfname.Size = new System.Drawing.Size(91, 18);
             this.stfname.TabIndex = 1;
@@ -380,7 +410,7 @@ namespace project_clz
             this.lable1.AutoSize = true;
             this.lable1.BackColor = System.Drawing.Color.Transparent;
             this.lable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable1.Location = new System.Drawing.Point(471, 6);
+            this.lable1.Location = new System.Drawing.Point(470, 19);
             this.lable1.Name = "lable1";
             this.lable1.Size = new System.Drawing.Size(282, 36);
             this.lable1.TabIndex = 0;
@@ -389,28 +419,16 @@ namespace project_clz
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = global::project_clz.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(436, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 118);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(781, 526);
+            this.pictureBox1.Size = new System.Drawing.Size(782, 518);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // fileSystemWatcher2
-            // 
-            this.fileSystemWatcher2.EnableRaisingEvents = true;
-            this.fileSystemWatcher2.SynchronizingObject = this;
             // 
             // add
             // 
@@ -423,13 +441,13 @@ namespace project_clz
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "add";
             this.Text = "B";
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).EndInit();
             this.ResumeLayout(false);
 
         }
