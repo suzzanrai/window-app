@@ -9,6 +9,9 @@ using Dapper;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel.DataAnnotations;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using MySqlX.XDevAPI.Relational;
 namespace project_clz
 {
     public partial class Form2 : Form
@@ -69,10 +72,23 @@ namespace project_clz
         {
             try
             {
-               //FOR MY SQLSERVER:
-               //string conStr = "Server=localhost;Port=3306;Database=library_system;Uid=root;Pwd=;Charset=utf8mb4;";
+                //FOR MY SQLSERVER:
+                //string conStr = "Server=localhost;Port=3306;Database=library_system;Uid=root;Pwd=;Charset=utf8mb4;";
 
-               string conStr = @"Data Source=SZN;Initial Catalog=LibararySystem;Integrated Security=True"; //DESKTOP-LG8ALSU\SQLEXPRESS
+                string email = txtemail.Text.Trim();
+                var emailAttribute = new EmailAddressAttribute();
+
+                if (emailAttribute.IsValid(email))
+                {
+                    // Email is valid
+                    Console.WriteLine("Valid Email");
+                }
+                else
+                {
+                    Console.WriteLine("Ivalid Email");
+
+                }
+                string conStr = @"Data Source=SZN;Initial Catalog=LibararySystem;Integrated Security=True"; //DESKTOP-LG8ALSU\SQLEXPRESS
                 string query = "INSERT INTO project_clz (Username, email, Password, Contact, Fullname ) VALUES (@name, @email, @password, @contact, @fullname)";
 
                 using (SqlConnection con = new SqlConnection(conStr))
@@ -80,6 +96,7 @@ namespace project_clz
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@name", txtusername.Text);
+                        cmd.Parameters.AddWithValue("@email", txtemail.Text);
                         cmd.Parameters.AddWithValue("@email", txtemail.Text);
                         cmd.Parameters.AddWithValue("@password", txtpassword.Text);
                         cmd.Parameters.AddWithValue("@contact", txtcontact.Text);

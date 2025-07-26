@@ -125,7 +125,7 @@
             this.comboBox3.Location = new System.Drawing.Point(879, 116);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(66, 26);
-            this.comboBox3.TabIndex = 70;
+            this.comboBox3.TabIndex = 2;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged_1);
             // 
             // comboBox4
@@ -135,7 +135,7 @@
             this.comboBox4.Location = new System.Drawing.Point(295, 115);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(71, 26);
-            this.comboBox4.TabIndex = 69;
+            this.comboBox4.TabIndex = 1;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged_1);
             // 
             // textBox7
@@ -362,7 +362,7 @@
             this.button1.Location = new System.Drawing.Point(950, 465);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 31;
+            this.button1.TabIndex = 3;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

@@ -127,7 +127,7 @@ namespace project_clz
             this.button4.Location = new System.Drawing.Point(1057, 49);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(101, 37);
-            this.button4.TabIndex = 30;
+            this.button4.TabIndex = 3;
             this.button4.Text = "DELET";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
@@ -161,7 +161,7 @@ namespace project_clz
             this.NEW.Location = new System.Drawing.Point(826, 50);
             this.NEW.Name = "NEW";
             this.NEW.Size = new System.Drawing.Size(93, 36);
-            this.NEW.TabIndex = 27;
+            this.NEW.TabIndex = 1;
             this.NEW.Text = "ADD";
             this.NEW.UseVisualStyleBackColor = true;
             this.NEW.Click += new System.EventHandler(this.NEW_Click);
@@ -171,7 +171,7 @@ namespace project_clz
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(803, 130);
+            this.label1.Location = new System.Drawing.Point(794, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 18);
             this.label1.TabIndex = 25;
@@ -182,10 +182,10 @@ namespace project_clz
             // 
             this.combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combobox.FormattingEnabled = true;
-            this.combobox.Location = new System.Drawing.Point(945, 127);
+            this.combobox.Location = new System.Drawing.Point(946, 127);
             this.combobox.Name = "combobox";
             this.combobox.Size = new System.Drawing.Size(67, 26);
-            this.combobox.TabIndex = 24;
+            this.combobox.TabIndex = 4;
             this.combobox.Visible = false;
             this.combobox.SelectedIndexChanged += new System.EventHandler(this.combobox_SelectedIndexChanged);
             // 
@@ -195,7 +195,7 @@ namespace project_clz
             this.txtmodify.Location = new System.Drawing.Point(945, 49);
             this.txtmodify.Name = "txtmodify";
             this.txtmodify.Size = new System.Drawing.Size(86, 37);
-            this.txtmodify.TabIndex = 23;
+            this.txtmodify.TabIndex = 2;
             this.txtmodify.Text = "MODIFY";
             this.txtmodify.UseVisualStyleBackColor = true;
             this.txtmodify.Click += new System.EventHandler(this.txtmodify_Click_1);
@@ -206,7 +206,7 @@ namespace project_clz
             this.button2.Location = new System.Drawing.Point(1086, 577);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 39);
-            this.button2.TabIndex = 22;
+            this.button2.TabIndex = 13;
             this.button2.Text = "SAVE";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -218,11 +218,11 @@ namespace project_clz
             this.radioButton2.Enabled = false;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButton2.Location = new System.Drawing.Point(1033, 394);
+            this.radioButton2.Location = new System.Drawing.Point(1034, 394);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(84, 22);
-            this.radioButton2.TabIndex = 21;
+            this.radioButton2.TabIndex = 11;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Female";
             this.radioButton2.UseVisualStyleBackColor = false;
@@ -235,11 +235,11 @@ namespace project_clz
             this.radioButton1.Enabled = false;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButton1.Location = new System.Drawing.Point(945, 394);
+            this.radioButton1.Location = new System.Drawing.Point(946, 394);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(65, 22);
-            this.radioButton1.TabIndex = 20;
+            this.radioButton1.TabIndex = 10;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Male";
             this.radioButton1.UseVisualStyleBackColor = false;
@@ -249,18 +249,18 @@ namespace project_clz
             // 
             this.txtbatch.Enabled = false;
             this.txtbatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbatch.Location = new System.Drawing.Point(945, 348);
+            this.txtbatch.Location = new System.Drawing.Point(946, 348);
             this.txtbatch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbatch.Name = "txtbatch";
             this.txtbatch.Size = new System.Drawing.Size(231, 24);
-            this.txtbatch.TabIndex = 19;
+            this.txtbatch.TabIndex = 9;
             // 
             // stbatch
             // 
             this.stbatch.AutoSize = true;
             this.stbatch.BackColor = System.Drawing.Color.Transparent;
             this.stbatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stbatch.Location = new System.Drawing.Point(803, 346);
+            this.stbatch.Location = new System.Drawing.Point(794, 346);
             this.stbatch.Name = "stbatch";
             this.stbatch.Size = new System.Drawing.Size(51, 18);
             this.stbatch.TabIndex = 17;
@@ -272,11 +272,11 @@ namespace project_clz
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(945, 531);
+            this.button1.Location = new System.Drawing.Point(946, 531);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 31);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Uplode Photo";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -286,7 +286,7 @@ namespace project_clz
             this.photo.BackColor = System.Drawing.Color.White;
             this.photo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.photo.Enabled = false;
-            this.photo.Location = new System.Drawing.Point(945, 432);
+            this.photo.Location = new System.Drawing.Point(946, 432);
             this.photo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.photo.Name = "photo";
             this.photo.Size = new System.Drawing.Size(116, 122);
@@ -301,28 +301,28 @@ namespace project_clz
             this.parsedDob.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parsedDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.parsedDob.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
-            this.parsedDob.Location = new System.Drawing.Point(945, 261);
+            this.parsedDob.Location = new System.Drawing.Point(946, 261);
             this.parsedDob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.parsedDob.Name = "parsedDob";
             this.parsedDob.Size = new System.Drawing.Size(231, 22);
-            this.parsedDob.TabIndex = 12;
+            this.parsedDob.TabIndex = 7;
             this.parsedDob.Value = new System.DateTime(2024, 5, 29, 23, 0, 53, 0);
             // 
             // txtfirstname
             // 
             this.txtfirstname.Enabled = false;
             this.txtfirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfirstname.Location = new System.Drawing.Point(945, 167);
+            this.txtfirstname.Location = new System.Drawing.Point(946, 167);
             this.txtfirstname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.Size = new System.Drawing.Size(233, 24);
-            this.txtfirstname.TabIndex = 11;
+            this.txtfirstname.TabIndex = 5;
             // 
             // txtcontactnumber
             // 
             this.txtcontactnumber.Enabled = false;
             this.txtcontactnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontactnumber.Location = new System.Drawing.Point(945, 302);
+            this.txtcontactnumber.Location = new System.Drawing.Point(946, 302);
             this.txtcontactnumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcontactnumber.Name = "txtcontactnumber";
             this.txtcontactnumber.Size = new System.Drawing.Size(231, 24);
@@ -333,18 +333,18 @@ namespace project_clz
             // 
             this.txtlastname.Enabled = false;
             this.txtlastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlastname.Location = new System.Drawing.Point(945, 215);
+            this.txtlastname.Location = new System.Drawing.Point(946, 215);
             this.txtlastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.Size = new System.Drawing.Size(233, 24);
-            this.txtlastname.TabIndex = 7;
+            this.txtlastname.TabIndex = 6;
             // 
             // stgender
             // 
             this.stgender.AutoSize = true;
             this.stgender.BackColor = System.Drawing.Color.Transparent;
             this.stgender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stgender.Location = new System.Drawing.Point(803, 394);
+            this.stgender.Location = new System.Drawing.Point(794, 394);
             this.stgender.Name = "stgender";
             this.stgender.Size = new System.Drawing.Size(63, 18);
             this.stgender.TabIndex = 6;
@@ -355,7 +355,7 @@ namespace project_clz
             this.stdate.AutoSize = true;
             this.stdate.BackColor = System.Drawing.Color.Transparent;
             this.stdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stdate.Location = new System.Drawing.Point(803, 261);
+            this.stdate.Location = new System.Drawing.Point(794, 261);
             this.stdate.Name = "stdate";
             this.stdate.Size = new System.Drawing.Size(111, 18);
             this.stdate.TabIndex = 5;
@@ -366,7 +366,7 @@ namespace project_clz
             this.stphoto.AutoSize = true;
             this.stphoto.BackColor = System.Drawing.Color.Transparent;
             this.stphoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stphoto.Location = new System.Drawing.Point(803, 448);
+            this.stphoto.Location = new System.Drawing.Point(794, 448);
             this.stphoto.Name = "stphoto";
             this.stphoto.Size = new System.Drawing.Size(53, 18);
             this.stphoto.TabIndex = 4;
@@ -377,7 +377,7 @@ namespace project_clz
             this.stcontact.AutoSize = true;
             this.stcontact.BackColor = System.Drawing.Color.Transparent;
             this.stcontact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stcontact.Location = new System.Drawing.Point(803, 302);
+            this.stcontact.Location = new System.Drawing.Point(794, 302);
             this.stcontact.Name = "stcontact";
             this.stcontact.Size = new System.Drawing.Size(131, 18);
             this.stcontact.TabIndex = 3;
@@ -388,7 +388,7 @@ namespace project_clz
             this.stlname.AutoSize = true;
             this.stlname.BackColor = System.Drawing.Color.Transparent;
             this.stlname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stlname.Location = new System.Drawing.Point(803, 215);
+            this.stlname.Location = new System.Drawing.Point(794, 215);
             this.stlname.Name = "stlname";
             this.stlname.Size = new System.Drawing.Size(89, 18);
             this.stlname.TabIndex = 2;
@@ -399,7 +399,7 @@ namespace project_clz
             this.stfname.AutoSize = true;
             this.stfname.BackColor = System.Drawing.Color.Transparent;
             this.stfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stfname.Location = new System.Drawing.Point(803, 167);
+            this.stfname.Location = new System.Drawing.Point(794, 167);
             this.stfname.Name = "stfname";
             this.stfname.Size = new System.Drawing.Size(91, 18);
             this.stfname.TabIndex = 1;

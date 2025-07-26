@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.quantity = new System.Windows.Forms.TextBox();
+            this.quantityy = new System.Windows.Forms.TextBox();
             this.txtbookide = new System.Windows.Forms.TextBox();
             this.txtsemester = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,9 +66,13 @@
             this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.BackgroundImage = global::project_clz.Properties.Resources.KGF_WebAssets_06;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.quantity);
+            this.panel1.Controls.Add(this.quantityy);
             this.panel1.Controls.Add(this.txtbookide);
             this.panel1.Controls.Add(this.txtsemester);
             this.panel1.Controls.Add(this.label7);
@@ -91,6 +99,47 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(946, 135);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(68, 24);
+            this.comboBox1.TabIndex = 28;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(767, 85);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(88, 33);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Add";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(985, 85);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(88, 33);
+            this.button6.TabIndex = 27;
+            this.button6.Text = "Delete";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(874, 85);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 33);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Modify";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -107,7 +156,7 @@
             this.textBox1.Location = new System.Drawing.Point(870, 314);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 26);
-            this.textBox1.TabIndex = 27;
+            this.textBox1.TabIndex = 5;
             // 
             // label2
             // 
@@ -121,13 +170,13 @@
             this.label2.Text = "ADD BOOK DETAIL";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // quantity
+            // quantityy
             // 
-            this.quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity.Location = new System.Drawing.Point(871, 180);
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(69, 24);
-            this.quantity.TabIndex = 23;
+            this.quantityy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityy.Location = new System.Drawing.Point(871, 180);
+            this.quantityy.Name = "quantityy";
+            this.quantityy.Size = new System.Drawing.Size(69, 24);
+            this.quantityy.TabIndex = 2;
             // 
             // txtbookide
             // 
@@ -135,7 +184,7 @@
             this.txtbookide.Location = new System.Drawing.Point(870, 136);
             this.txtbookide.Name = "txtbookide";
             this.txtbookide.Size = new System.Drawing.Size(69, 24);
-            this.txtbookide.TabIndex = 23;
+            this.txtbookide.TabIndex = 1;
             // 
             // txtsemester
             // 
@@ -153,7 +202,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(543, 519);
+            this.label7.Location = new System.Drawing.Point(544, 537);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(195, 16);
             this.label7.TabIndex = 18;
@@ -163,10 +212,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox3.Image = global::project_clz.Properties.Resources._66982lms;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 113);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 103);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(741, 428);
+            this.pictureBox3.Size = new System.Drawing.Size(741, 456);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
@@ -182,10 +231,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::project_clz.Properties.Resources.icons8_cross_30;
-            this.pictureBox2.Location = new System.Drawing.Point(1138, 16);
+            this.pictureBox2.Location = new System.Drawing.Point(1139, 6);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 48);
+            this.pictureBox2.Size = new System.Drawing.Size(61, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -194,11 +243,11 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(992, 505);
+            this.button3.Location = new System.Drawing.Point(980, 505);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 30);
-            this.button3.TabIndex = 15;
+            this.button3.Size = new System.Drawing.Size(93, 36);
+            this.button3.TabIndex = 8;
             this.button3.Text = "OK";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -206,10 +255,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(885, 505);
+            this.button2.Location = new System.Drawing.Point(871, 505);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 30);
+            this.button2.Size = new System.Drawing.Size(91, 36);
             this.button2.TabIndex = 14;
             this.button2.Text = "CLEAR";
             this.button2.UseVisualStyleBackColor = true;
@@ -222,7 +271,7 @@
             this.txtpublication.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtpublication.Name = "txtpublication";
             this.txtpublication.Size = new System.Drawing.Size(195, 24);
-            this.txtpublication.TabIndex = 12;
+            this.txtpublication.TabIndex = 7;
             this.txtpublication.TextChanged += new System.EventHandler(this.txtpublication_TextChanged);
             // 
             // bpublication
@@ -244,7 +293,7 @@
             this.txtauthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtauthor.Name = "txtauthor";
             this.txtauthor.Size = new System.Drawing.Size(195, 24);
-            this.txtauthor.TabIndex = 9;
+            this.txtauthor.TabIndex = 6;
             this.txtauthor.TextChanged += new System.EventHandler(this.txtauthor_TextChanged);
             // 
             // bauthor
@@ -269,7 +318,7 @@
             this.txtfaculty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtfaculty.Name = "txtfaculty";
             this.txtfaculty.Size = new System.Drawing.Size(195, 26);
-            this.txtfaculty.TabIndex = 7;
+            this.txtfaculty.TabIndex = 4;
             this.txtfaculty.SelectedIndexChanged += new System.EventHandler(this.txtfaculty_SelectedIndexChanged);
             // 
             // bfaculty
@@ -290,7 +339,7 @@
             this.txtbookname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbookname.Name = "txtbookname";
             this.txtbookname.Size = new System.Drawing.Size(195, 24);
-            this.txtbookname.TabIndex = 5;
+            this.txtbookname.TabIndex = 3;
             this.txtbookname.TextChanged += new System.EventHandler(this.txtbookname_TextChanged);
             // 
             // label3
@@ -377,7 +426,11 @@
         private System.Windows.Forms.TextBox txtbookide;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox textBox1;
-        private System.Windows.Forms.TextBox quantity;
+        private System.Windows.Forms.TextBox quantityy;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

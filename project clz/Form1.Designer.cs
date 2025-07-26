@@ -62,7 +62,7 @@
             button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(212, 39);
-            button1.TabIndex = 18;
+            button1.TabIndex = 4;
             button1.Text = "Sign Up";
             button1.UseVisualStyleBackColor = false;
             button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -96,7 +96,7 @@
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 28);
-            this.button3.TabIndex = 21;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Exit";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 39);
-            this.button2.TabIndex = 19;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Log In";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_2);
@@ -126,7 +126,7 @@
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(215, 22);
-            this.txtpassword.TabIndex = 17;
+            this.txtpassword.TabIndex = 2;
             // 
             // txtusername
             // 
@@ -135,7 +135,7 @@
             this.txtusername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(217, 22);
-            this.txtusername.TabIndex = 16;
+            this.txtusername.TabIndex = 1;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // lusername

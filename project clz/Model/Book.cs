@@ -13,5 +13,8 @@ namespace project_clz.Model
         public string Faculty  { get; set; }
         public string  Semester { get; set; }
         public int Quantity { get; set; }
+        public string Author { get; set; }
+        public string Publication { get; set; }
+      
     }
 }

@@ -114,6 +114,18 @@ namespace project_clz
                     return;
                 }
 
+                if (string.IsNullOrWhiteSpace(txtfirstname.Text) ||
+                 string.IsNullOrWhiteSpace(txtlastname.Text) ||
+                 parsedDob == null ||
+                 string.IsNullOrWhiteSpace(txtcontactnumber.Text) ||
+                 string.IsNullOrWhiteSpace(txtbatch.Text) ||
+                 string.IsNullOrWhiteSpace(gender) ||
+                 photo == null)
+                {
+                    MessageBox.Show("All fields must be filled before saving the data.");
+                    return;
+                }
+
                 using (IDbConnection db = new SqlConnection(connectionString))
                 {
                     db.Open();
@@ -317,6 +329,8 @@ namespace project_clz
                 }
                 else
                 {
+
+                     
                     photo.Image = null;
                 }
             }

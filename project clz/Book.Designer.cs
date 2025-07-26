@@ -123,6 +123,8 @@ namespace project_clz {
         public string Semester { get; internal set; }
         public object Quantity { get; internal set; }
         public object BookId { get; internal set; }
+        public string Author { get; internal set; }
+        public string Publication { get; internal set; }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
